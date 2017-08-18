@@ -1,6 +1,6 @@
 # Composer Permission
 
-Composer script handling directories permissions by making them writable both
+Composer script handling directories permissions by making them writable
 
 ## Usage
 
