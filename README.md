@@ -13,7 +13,7 @@ And then put the below configuration in your composer.json file
 
 Add the following in your root composer.json file:
 
-```
+```json
 {
     ...
     "scripts": {
@@ -24,7 +24,6 @@ Add the following in your root composer.json file:
     "extra": {
         "writable": ["relative_path/to_make_writable"]
     }
-    ...
 }
 ```
 
