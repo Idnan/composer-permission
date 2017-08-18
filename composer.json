@@ -1,5 +1,5 @@
 {
-    "name": "idnan/permissions-handler",
+    "name": "idnan/permission-handler",
     "description": "Composer script handling directories permissions by making them writable both by the web server and the command line user.",
     "keywords": [
         "composer",

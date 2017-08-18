@@ -9,7 +9,7 @@ Add the following in your root composer.json file:
 ```json
 {
     "require": {
-        "idnan/permissions-handler": "~1.0"
+        "idnan/permission-handler": "~1.0"
     },
     "scripts": {
         "post-install-cmd": [
