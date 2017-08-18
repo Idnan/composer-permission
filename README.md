@@ -1,4 +1,4 @@
-# Permissions Handler
+# Permission Handler
 
 Composer script handling directories permissions by making them writable both
 
