@@ -1,15 +1,15 @@
 <?php
 
-namespace Idnan\PermissionHandler;
+namespace Idnan\ComposerPermission;
 
 use Composer\Script\Event;
 use Exception;
-use Idnan\PermissionHandler\Exceptions\PathNotFoundException;
+use Idnan\ComposerPermission\Exceptions\PathNotFoundException;
 
 /**
  * Class Handler
  *
- * @package Idnan\PermissionHandler
+ * @package Idnan\ComposerPermission
  */
 class Handler
 {

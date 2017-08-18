@@ -1,9 +1,10 @@
 {
-    "name": "idnan/permission-handler",
-    "description": "Composer script handling directories permissions by making them writable both by the web server and the command line user.",
+    "name": "idnan/composer-permission",
+    "description": "Composer script handling directories permissions by making them writable both",
     "keywords": [
         "composer",
-        "permission handler"
+        "permission handler",
+        "composer permission"
     ],
     "license": "MIT",
     "authors": [
@@ -13,8 +14,7 @@
         }
     ],
     "require": {
-        "php": ">=5.3",
-        "symfony/process": "~2.3|~3.0"
+        "php": ">=5.3"
     },
     "require-dev": {
         "composer/composer": "1.0.*@dev",
@@ -22,7 +22,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Idnan\\PermissionHandler\\": "src/"
+            "Idnan\\ComposerPermission\\": "src/"
         }
     }
 }

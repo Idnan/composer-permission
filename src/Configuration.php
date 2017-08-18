@@ -1,14 +1,14 @@
 <?php
 
-namespace Idnan\PermissionHandler;
+namespace Idnan\ComposerPermission;
 
 use Composer\Script\Event;
-use Idnan\PermissionHandler\Exceptions\InvalidConfigurationException;
+use Idnan\ComposerPermission\Exceptions\InvalidConfigurationException;
 
 /**
  * Class Configuration
  *
- * @package Idnan\PermissionHandler
+ * @package Idnan\ComposerPermission
  */
 class Configuration
 {

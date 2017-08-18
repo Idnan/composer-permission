@@ -1,13 +1,13 @@
 <?php
 
-namespace Idnan\PermissionHandler\Exceptions;
+namespace Idnan\ComposerPermission\Exceptions;
 
 use InvalidArgumentException;
 
 /**
  * Class InvalidConfigurationException
  *
- * @package Idnan\PermissionHandler\Exceptions
+ * @package Idnan\ComposerPermission\Exceptions
  */
 class InvalidConfigurationException extends InvalidArgumentException
 {

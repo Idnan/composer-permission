@@ -1,13 +1,13 @@
 <?php
 
-namespace Idnan\PermissionHandler\Exceptions;
+namespace Idnan\ComposerPermission\Exceptions;
 
 use InvalidArgumentException;
 
 /**
  * Class PathNotFoundExceptions
  *
- * @package Idnan\PermissionHandler\Exceptions
+ * @package Idnan\ComposerPermission\Exceptions
  */
 class PathNotFoundException extends InvalidArgumentException
 {
