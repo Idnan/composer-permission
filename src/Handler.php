@@ -3,6 +3,7 @@
 namespace Idnan\PermissionHandler;
 
 use Composer\Script\Event;
+use Exception;
 use Idnan\PermissionHandler\Exceptions\PathNotFoundException;
 
 /**
@@ -19,15 +20,14 @@ class Handler
      */
     public static function setPermissions(Event $event)
     {
-        $event->getIO()->write('Setting up permissions');
-
+        $permission    = static::PERMISSION_WRITABLE;
         $configuration = new Configuration($event);
 
-        $writableDirs = $configuration->getWritableDirs();
+        $event->getIO()->write('Setting up permissions');
 
-        foreach ($writableDirs as $writableDir) {
+        foreach ($configuration->getWritableDirs() as $writableDir) {
 
-            $event->getIO()->write("chmod('" . $writableDir . "', " . static::PERMISSION_WRITABLE . ")...");
+            $event->getIO()->write("{$writableDir} => {$permission}...");
 
             if (!is_dir($writableDir) || !is_file($writableDir)) {
                 throw new PathNotFoundException('Invalid writable path ' . $writableDir);
@@ -37,8 +37,8 @@ class Handler
                 if (chmod($writableDir, octdec(static::PERMISSION_WRITABLE))) {
                     $event->getIO()->write("Done");
                 }
-            } catch (\Exception $e) {
-                $event->getIO()->write(sprintf('<error>%s</error>', $e->getMessage()));
+            } catch (Exception $e) {
+                $event->getIO()->writeError($e->getMessage());
             }
         }
     }
