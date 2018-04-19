@@ -40,8 +40,8 @@ e.g. if you are using laravel and want to make `storage` directory writable, it 
 * Report issues
 * Open pull request with improvements
 * Features Suggestions
-* Reach out to me directly at mahradnan@hotmail.com or [![Twitter URL](https://img.shields.io/twitter/url/https/twitter.com/idnan_se.svg?style=social&label=Follow%20%40idnan_se)](https://twitter.com/idnan_se)
+* Reach out to me directly at idnan.se@gmail.com or [![Twitter URL](https://img.shields.io/twitter/url/https/twitter.com/idnan_se.svg?style=social&label=Follow%20%40idnan_se)](https://twitter.com/idnan_se)
 
 ## License
 
-MIT © [Adnan Ahmed](mailto:mahradnan@hotmail.com)
+MIT © [Adnan Ahmed](mailto:idnan.se@gmail.com)
