@@ -30,16 +30,16 @@ class Configuration
     /**
      * @return array
      */
-    public function getWritableDirs()
+    public function getDirectoryPermissions()
     {
-        if (!isset($this->configuration['writable'])) {
-            throw new InvalidConfigurationException('The writable must be specified in composer arbitrary extra data.');
+        if (!isset($this->configuration['dir_permissions'])) {
+            throw new InvalidConfigurationException('The dir_permissions must be specified in composer arbitrary extra data.');
         }
 
-        if (!is_array($this->configuration['writable'])) {
+        if (!is_array($this->configuration['dir_permissions'])) {
             throw new InvalidConfigurationException('The writable must be an array.');
         }
 
-        return $this->configuration['writable'];
+        return $this->configuration['dir_permissions'];
     }
 }

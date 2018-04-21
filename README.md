@@ -1,6 +1,6 @@
 # Composer Permission
 
-Composer script handling directories permissions by making them writable
+Composer script handling directories permissions
 
 ## Usage
 
@@ -11,8 +11,6 @@ composer require idnan/composer-permission:~1.0
 ```
 And then put the below configuration in your composer.json file
 
-Add the following in your root composer.json file:
-
 ```json
 {
     ...
@@ -22,18 +20,12 @@ Add the following in your root composer.json file:
         ]
     },
     "extra": {
-        "writable": ["relative_path/to_make_writable"]
+		"dir_permissions": ["app/strorage:0777"]
     }
 }
 ```
 
-e.g. if you are using laravel and want to make `storage` directory writable, it should be
-
-```
-"extra": {
-    "writable": ["storage"]
-}
-```
+You can pass any permission as long as it is accepted by [chmod](http://php.net/manual/en/function.chmod.php).
 
 ## Contribution
 

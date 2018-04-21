@@ -19,22 +19,30 @@ class Handler
      */
     public static function setPermissions(Event $event)
     {
-        $permission = static::PERMISSION_WRITABLE;
-
         $configuration = new Configuration($event);
 
         $event->getIO()->write('Setting up permissions');
 
-        foreach ($configuration->getWritableDirs() as $writableDir) {
+        foreach ($configuration->getDirectoryPermissions() as $writableDir) {
 
-            $event->getIO()->write("{$writableDir} => {$permission}");
+            $parts = explode(":", $writableDir);
 
-            if (!is_dir($writableDir) && !is_file($writableDir)) {
-                $event->getIO()->writeError("<error>Invalid writable path {$writableDir}</error>");
+            // default permission is writable
+            $permission = static::PERMISSION_WRITABLE;
+            if (!empty($parts[1])) {
+                $permission = $parts[1];
+            }
+
+            $dir = $parts[0];
+
+            $event->getIO()->write("{$dir} => {$permission}");
+
+            if (!is_dir($dir) && !is_file($dir)) {
+                $event->getIO()->writeError("<error>Invalid writable path {$dir}</error>");
             }
 
             try {
-                if (chmod($writableDir, octdec(static::PERMISSION_WRITABLE))) {
+                if (chmod($dir, $permission)) {
                     $event->getIO()->write("Done");
                 }
             } catch (Exception $e) {
