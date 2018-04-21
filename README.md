@@ -7,7 +7,7 @@ Composer script handling directories permissions
 Run the below command to install the plugin
 
 ```
-composer require idnan/composer-permission:~1.0
+composer require idnan/composer-permission
 ```
 And then put the below configuration in your composer.json file
 
