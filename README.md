@@ -20,12 +20,12 @@ And then put the below configuration in your composer.json file
         ]
     },
     "extra": {
-		"dir_permissions": ["app/strorage:0777"]
+        "dir_permissions": ["app/strorage:0777"]
     }
 }
 ```
 
-You can pass any permission as long as it is accepted by [chmod](http://php.net/manual/en/function.chmod.php).
+Where replace `app/storage` with the relative path for which permissions is to be changed and `0777` with the permission that you may want. You can pass any permission as long as it is accepted by [chmod](http://php.net/manual/en/function.chmod.php).
 
 ## Contribution
 
