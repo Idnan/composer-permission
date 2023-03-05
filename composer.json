@@ -1,5 +1,5 @@
 {
-    "name": "idnan/composer-permission",
+    "name": "darkalchemy/composer-permission",
     "description": "Composer script handling directories permissions by making them writable both",
     "keywords": [
         "composer",
@@ -17,8 +17,8 @@
         "php": ">=5.3"
     },
     "require-dev": {
-        "composer/composer": "1.0.*@dev",
-        "phpspec/phpspec": "~2.0"
+        "composer/composer": "dev-main",
+        "phpspec/phpspec": "^7.3"
     },
     "autoload": {
         "psr-4": {
