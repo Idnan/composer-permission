@@ -42,7 +42,7 @@ class Handler
             }
 
             try {
-                if (chmod($dir, $permission)) {
+                if (chmod($dir, octdec($permission))) {
                     $event->getIO()->write("Done");
                 }
             } catch (Exception $e) {
