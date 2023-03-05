@@ -7,7 +7,7 @@ Composer script handling directories permissions
 Run the below command to install the plugin
 
 ```
-composer require idnan/composer-permission
+composer require darkalchemy/composer-permission
 ```
 And then put the below configuration in your composer.json file
 
